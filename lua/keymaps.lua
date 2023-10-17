@@ -1,3 +1,5 @@
+vim.g.mapleader = ","
+
 -- My personal escape preference. Beware it's odd
 vim.keymap.set("i", "<S-Space>", "<esc>", { silent = true })
 
