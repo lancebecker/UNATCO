@@ -1,8 +1,3 @@
-require('keymaps')
-require('options')
-require('autocmds')
-require('misc')
+require('unatco.core')
+require('unatco.lazy')
 
-require('plugins.lazy')
-
-vim.cmd([[colorscheme gruvbox]])

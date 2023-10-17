@@ -1,4 +1,3 @@
-
 local opt = vim.opt
 
 opt.mouse = "a" -- Enable mouse mode
@@ -53,5 +52,4 @@ if vim.g.neovide then
 
   -- Font Choices
   vim.o.guifont = "OverpassM Nerd Font Mono:h16"
-  -- vim.o.guifont = "iMWritingMono Nerd Font Mono:h16"
 end

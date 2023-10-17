@@ -46,8 +46,3 @@ if vim.g.neovide then
   vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
--- Toggle Twilight Treesitter Behavior
-vim.keymap.set("n", "<leader>tt", "<Cmd>Twilight<CR>")
-
--- Use LSP format quickly
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
