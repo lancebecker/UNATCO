@@ -15,4 +15,18 @@ vim.opt.rtp:prepend(lazypath)
 -- Fixes Notify opacity issues
 vim.o.termguicolors = true
 
-require('lazy').setup("unatco.plugins")
+require('lazy').setup({
+  { import = "unatco.plugins" },
+  { import = "unatco.plugins.lsp" },
+}, {
+  install = {
+    colorscheme = { "gruvbox" },
+  },
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
