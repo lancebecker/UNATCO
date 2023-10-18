@@ -46,9 +46,9 @@ if vim.g.neovide then
 
   vim.g.neovide_remember_window_size = true
 
-  vim.g.neovide_cursor_animation_length = 0.1
-  vim.g.neovide_cursor_trail_size = 0.2
-  vim.g.neovide_cursor_animate_in_insert_mode = false
+  -- vim.g.neovide_cursor_animation_length = 0.1
+  -- vim.g.neovide_cursor_trail_size = 0.2
+  -- vim.g.neovide_cursor_animate_in_insert_mode = false
 
   -- Font Choices
   vim.o.guifont = "OverpassM Nerd Font Mono:h16"

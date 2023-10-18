@@ -4,6 +4,7 @@
 
 ### 1. Storage
 * ripgrep
+* fd
 
 ### 2. Assembly 
 ```bash

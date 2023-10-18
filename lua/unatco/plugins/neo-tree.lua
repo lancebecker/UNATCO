@@ -1,5 +1,5 @@
 -- adapted from:
--- https://github.com/pysan3/dotfiles/blob/main/nvim/lua/config/lazy-plug.lua
+-- https://github.com/pysan3/dotfiles/blob/main/nvim/lua/plugins/11-neo-tree.lua
 
 return {
   "nvim-neo-tree/neo-tree.nvim",
@@ -207,7 +207,7 @@ return {
           end)
         end,
       },
-      bind_to_cwd = false, -- true creates a 2-way binding between vim's cwd and neo-tree's root
+      bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
       filtered_items = {
         visible = false, -- when true, they will just be displayed differently than normal items
         force_visible_in_empty_folder = false,
