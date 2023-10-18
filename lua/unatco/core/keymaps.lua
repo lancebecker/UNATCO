@@ -36,6 +36,10 @@ vim.keymap.set("n", "<leader>Y", '"+Y')
 -- Substitute on cursor word
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
+-- Clear search with <esc>
+vim.keymap.set("n", "<esc>", "<cmd>noh<cr><esc>")
+vim.keymap.set("i", "<esc>", "<cmd>noh<cr><esc>")
+
 if vim.g.neovide then
   vim.keymap.set("n", "<D-s>", ":w<CR>") -- Save
   vim.keymap.set("v", "<D-c>", '"+y') -- Copy
