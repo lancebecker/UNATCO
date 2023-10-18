@@ -3,7 +3,6 @@ vim.g.mapleader = ","
 -- My personal escape preference. Beware it's odd
 vim.keymap.set("i", "<S-Space>", "<esc>", { silent = true })
 
--- More natural motion for start of line (H) and end of line (L)
 vim.keymap.set("n", "H", "0")
 vim.keymap.set("n", "L", "$")
 
