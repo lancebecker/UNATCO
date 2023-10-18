@@ -18,6 +18,8 @@ vim.o.termguicolors = true
 require('lazy').setup({
   { import = "unatco.plugins" },
   { import = "unatco.plugins.lsp" },
+  { import = "unatco.plugins.ui" },
+  { import = "unatco.plugins.editor" },
 }, {
   install = {
     colorscheme = { "gruvbox" },
