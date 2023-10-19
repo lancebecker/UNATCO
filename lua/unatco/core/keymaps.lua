@@ -49,3 +49,6 @@ if vim.g.neovide then
   vim.keymap.set("i", "<D-v>", '<ESC>l"+Pli') -- Paste insert mode
 end
 
+
+-- Hack to set the CD
+vim.keymap.set("n", "<leader><leader>c", ":cd %:h<cr>")

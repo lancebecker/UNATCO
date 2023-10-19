@@ -41,7 +41,7 @@ opt.fillchars = {
   eob = " ",
 }
 
-opt.guifont = "OverpassM Nerd Font Mono:h16"
+opt.guifont = "OverpassM Nerd Font Mono:h14"
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
