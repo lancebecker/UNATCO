@@ -20,6 +20,7 @@ require('lazy').setup({
   { import = "unatco.plugins.lsp" },
   { import = "unatco.plugins.ui" },
   { import = "unatco.plugins.editor" },
+  { import = "unatco.plugins.treesitter" },
 }, {
   install = {
     colorscheme = { "gruvbox" },
