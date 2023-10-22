@@ -17,6 +17,7 @@ vim.o.termguicolors = true
 
 require('lazy').setup({
   { import = "unatco.plugins" },
+  { import = "unatco.plugins.db" },
   { import = "unatco.plugins.lsp" },
   { import = "unatco.plugins.ui" },
   { import = "unatco.plugins.editor" },
