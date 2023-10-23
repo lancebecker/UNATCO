@@ -41,7 +41,7 @@ opt.fillchars = {
   eob = " ",
 }
 
-opt.guifont = "OverpassM Nerd Font Mono:h14"
+opt.guifont = "OverpassM Nerd Font Mono:h16"
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
@@ -51,4 +51,8 @@ if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = "railgun"
   vim.g.neovide_transparency = 1.0
   vim.g.neovide_remember_window_size = true
+
+  vim.g.neovide_cursor_animation_length = 0.1
+  vim.g.neovide_cursor_trail_size = 0.2
+  vim.g.neovide_cursor_animate_in_insert_mode = false
 end
