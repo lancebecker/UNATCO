@@ -24,4 +24,5 @@
 * https://github.com/LazyVim/LazyVim
 * https://github.com/pysan3/dotfiles/tree/main/nvim
 * https://github.com/josean-dev/dev-environment-files/tree/main/.config/nvimkeymaps
+* https://github.com/stevearc/dotfiles/tree/master/.config/nvim
 
