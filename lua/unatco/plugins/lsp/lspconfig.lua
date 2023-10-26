@@ -78,16 +78,18 @@ return {
       on_attach = on_attach,
       settings = {
         Lua = {
-          -- make the language server recognize "vim" global
           diagnostics = {
             globals = { "vim" },
           },
           workspace = {
-            -- make language server aware of runtime files
             library = {
-              [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-              [vim.fn.stdpath("config") .. "/lua"] = true,
+              [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+              [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+              [vim.fn.stdpath "data" .. "/lazy/ui/nvchad_types"] = true,
+              [vim.fn.stdpath "data" .. "/lazy/lazy.nvim/lua/lazy"] = true,
             },
+            maxPreload = 100000,
+            preloadFileSize = 10000,
           },
         },
       },

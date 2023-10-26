@@ -7,6 +7,14 @@ vim.api.nvim_create_autocmd("FileType", {
   desc = "Disable comment continuation",
 })
 
+-- dont list quickfix buffers
+vim.api.nvim_create_autocmd({"FileType"}, {
+  pattern = "qf",
+  callback = function()
+    vim.opt_local.buflisted = false
+  end,
+})
+
 -- resize splits if window got resized
 vim.api.nvim_create_autocmd({ "VimResized" }, {
   callback = function()
