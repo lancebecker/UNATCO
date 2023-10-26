@@ -38,13 +38,15 @@ return {
       "html",
       "tsserver",
       "cssls",
-      'rust_analyzer',
       'gopls',
       'tailwindcss',
+      'angularls',
+      'jsonls',
     }
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     local lspconfig = require('lspconfig')
+    local util = require "lspconfig/util"
 
     capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
@@ -55,11 +57,26 @@ return {
       }
     end
 
-    -- configure lua server (with special settings)
+    -- confiure rust server
+    lspconfig["rust_analyzer"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = {"rust"},
+      root_dir = util.root_pattern("Cargo.toml"),
+      settings = {
+        ['rust-analyzer'] = {
+          cargo = {
+            allFeatures = true,
+          },
+        },
+      },
+    })
+
+    -- configure lua server
     lspconfig["lua_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      settings = { -- custom settings for lua
+      settings = {
         Lua = {
           -- make the language server recognize "vim" global
           diagnostics = {

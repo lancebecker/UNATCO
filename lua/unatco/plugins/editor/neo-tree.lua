@@ -24,9 +24,9 @@ return {
   opts = {
     sources = {
       "filesystem",
-      "buffers",
-      "git_status",
-      "document_symbols",
+      -- "buffers",
+      -- "git_status",
+      -- "document_symbols",
     },
     auto_clean_after_session_restore = true,
     close_if_last_window = true,
@@ -48,9 +48,9 @@ return {
       winbar = true,
       sources = {
         { source = "filesystem", display_name = " 󰉓 File " },
-        { source = "git_status", display_name = " 󰊢 Git " },
-        { source = "buffers", display_name = " 󰓩 Buf " },
-        { source = "document_symbols", display_name = "  Sym " },
+        -- { source = "git_status", display_name = " 󰊢 Git " },
+        -- { source = "buffers", display_name = " 󰓩 Buf " },
+        -- { source = "document_symbols", display_name = "  Sym " },
       },
       content_layout = "center",
     },

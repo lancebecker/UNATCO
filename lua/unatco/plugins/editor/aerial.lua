@@ -23,15 +23,16 @@ return {
      show_guides = true,
       layout = {
         max_width = { 80, 0.2 },
+        min_width = 40,
         default_direction = "prefer_left",
       },
       highlight_on_hover = true,
       close_automatic_events = {},
       link_folds_to_tree = true,
       link_tree_to_folds = true,
-      manage_folds = {
-        ["_"] = true,
-      },
+      -- manage_folds = {
+      --   ["_"] = true,
+      -- },
       nerd_font = vim.g.nerd_font,
       lazy_load = false,
       keymaps = {
