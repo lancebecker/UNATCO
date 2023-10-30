@@ -21,8 +21,9 @@ return {
           "--line-number",
           "--column",
           "--smart-case",
+          "--fixed-strings", -- escapes "[] () *"
         },
-        prompt_prefix = "   ",
+        prompt_prefix = "⇶ ",
         selection_caret = "  ",
         entry_prefix = "  ",
         initial_mode = "insert",
@@ -43,7 +44,7 @@ return {
           preview_cutoff = 120,
         },
         file_sorter = require("telescope.sorters").get_fuzzy_file,
-        file_ignore_patterns = { "node_modules" },
+        file_ignore_patterns = { "node_modules", ".git" },
         generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
         path_display = { "truncate" },
         winblend = 0,
@@ -57,6 +58,7 @@ return {
 
         mappings = {
           i = {
+            ["<esc>"] = actions.close,
             ["<C-p>"] = actions.move_selection_previous, -- move to prev result
             ["<C-n>"] = actions.move_selection_next, -- move to next result
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
@@ -77,7 +79,6 @@ return {
 
     telescope.load_extension("fzf")
 
-    -- set keymaps
     local keymap = vim.keymap
 
     keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Fuzzy find files in cwd" })

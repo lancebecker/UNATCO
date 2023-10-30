@@ -42,8 +42,11 @@ opt.fillchars = {
   eob = " ",
 }
 
--- opt.guifont = "OverpassM Nerd Font Mono:h16"
-opt.guifont = "JetBrainsMono Nerd Font:h15"
+opt.listchars = { trail = '⇲', tab = '»»' }
+opt.list = true
+
+opt.guifont = "OverpassM Nerd Font Mono:h16"
+-- opt.guifont = "JetBrainsMono Nerd Font:h15"
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
@@ -51,12 +54,18 @@ end
 
 if vim.g.neovide then
   vim.g.neovide_cursor_vfx_mode = "railgun"
-  vim.g.neovide_transparency = 1.0
+  vim.g.neovide_transparency = 1 
   vim.g.neovide_remember_window_size = true
 
   vim.g.neovide_cursor_animation_length = 0.1
   vim.g.neovide_cursor_trail_size = 0.2
   vim.g.neovide_cursor_animate_in_insert_mode = false
 
-  vim.opt.linespace = 5
+  -- vim.opt.linespace = 5
 end
+
+-- make comments and HTML attributes italic
+vim.cmd([[highlight Comment cterm=italic term=italic gui=italic]])
+vim.cmd([[highlight htmlArg cterm=italic term=italic gui=italic]])
+vim.cmd([[highlight xmlAttrib cterm=italic term=italic gui=italic]])
+vim.cmd([[highlight Normal ctermbg=none]])

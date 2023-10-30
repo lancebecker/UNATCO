@@ -26,4 +26,5 @@
 * https://github.com/josean-dev/dev-environment-files/tree/main/.config/nvimkeymaps
 * https://github.com/stevearc/dotfiles/tree/master/.config/nvim
 * https://github.com/whatsthatsmell/dots/tree/master/public%20dots/vim-nvim
+* https://github.com/prdanelli/dotfiles/tree/main/neovim
 
