@@ -40,6 +40,7 @@ return {
           "rust",
           "bash",
           "regex",
+          "toml",
         },
         incremental_selection = {
           enable = true,

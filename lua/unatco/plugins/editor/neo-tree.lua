@@ -31,7 +31,7 @@ return {
     auto_clean_after_session_restore = true,
     close_if_last_window = true,
     enable_diagnostics = true,
-    enable_git_status = true,
+    enable_git_status =  false,
     enable_modified_markers = true,
     enable_refresh_on_write = true,
     git_status_async = true,

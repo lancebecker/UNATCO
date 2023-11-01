@@ -42,6 +42,10 @@ return {
       'tailwindcss',
       'angularls',
       'jsonls',
+      "yamlls",
+      "svelte",
+      "dockerls",
+      "graphql",
     }
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()

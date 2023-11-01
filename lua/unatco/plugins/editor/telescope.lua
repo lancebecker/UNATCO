@@ -59,8 +59,8 @@ return {
         mappings = {
           i = {
             ["<esc>"] = actions.close,
-            ["<C-p>"] = actions.move_selection_previous, -- move to prev result
-            ["<C-n>"] = actions.move_selection_next, -- move to next result
+            ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+            ["<C-j>"] = actions.move_selection_next, -- move to next result
             ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
           },
           n = { ["q"] = require("telescope.actions").close },
@@ -68,7 +68,14 @@ return {
       },
       pickers = {
         buffers = {
-          layout_strategy = "vertical"
+          layout_strategy = "vertical",
+          mappings = {
+            i = {
+              ["<C-k>"] = actions.move_selection_previous, -- move to prev result
+              ["<C-j>"] = actions.move_selection_next, -- move to next result
+              ["<C-d>"] = actions.delete_buffer + actions.move_to_top,
+            }
+          }
         }
       },
       extensions_list = { "themes", "terms", "fzf" },
